@@ -8,7 +8,12 @@ NULL
 #' @rdname empirical_deviation
 #'
 #' @export
-var_n <- function(x) {
+var_n <- function(x, ...) {
+  UseMethod("var_n")
+}
+
+#' @export
+var_n.default <- function(x, ...) {
   n <- length(x)
   (n - 1) / n * var(x)
 }

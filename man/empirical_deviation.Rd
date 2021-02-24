@@ -7,7 +7,7 @@
 \alias{cov_n}
 \title{Empirical deviations}
 \usage{
-var_n(x)
+var_n(x, ...)
 
 sd_n(x)
 

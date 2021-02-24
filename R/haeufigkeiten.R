@@ -21,7 +21,16 @@ sorted_data <- function(x) {
 
 #' @export
 mean.sorted_data <- function(x, ...) {
-  sum(x$a_j * x$f_j)
+  with(x, {
+    sum(a_j * f_j)
+  })
+}
+
+#' @export
+var_n.sorted_data <- function(x, ...) {
+  with(x, {
+    sum((a_j - mean(x))^2 * f_j)
+  })
 }
 
 #' Transform contingency table of counts to vector
@@ -112,5 +121,14 @@ grouped_data <- function(breaks, x, x_type = c("x", "h_j", "f_j"), n) {
 
 #' @export
 mean.grouped_data <- function(x, ...) {
-  sum(x$m_j * x$f_j)
+  with(x, {
+    sum(m_j * f_j)
+  })
+}
+
+#' @export
+var_n.grouped_data <- function(x, ...) {
+  with(x, {
+    sum((m_j - mean(x))^2 * f_j)
+  })
 }

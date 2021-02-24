@@ -2,6 +2,9 @@
 
 S3method(mean,grouped_data)
 S3method(mean,sorted_data)
+S3method(var_n,default)
+S3method(var_n,grouped_data)
+S3method(var_n,sorted_data)
 export(chi_squared)
 export(cor_kendall)
 export(cor_pearson)
