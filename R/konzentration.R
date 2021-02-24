@@ -1,3 +1,9 @@
+#' Lorenz concentration curve
+#'
+#' Table containing data constituting the Lorenz concentration curve.
+#'
+#' @param x A numeric vector.
+#'
 #' @export
 lorenz_concentration <- function(x) {
   dplyr::tibble(a_j = x) %>%
@@ -11,6 +17,10 @@ lorenz_concentration <- function(x) {
     )
 }
 
+#' Gini coefficient
+#'
+#' @param x A numeric vector.
+#'
 #' @export
 gini_coefficient <- function(x) {
   lorenz <- lorenz_concentration(x)
@@ -18,6 +28,10 @@ gini_coefficient <- function(x) {
   1 - 2 * area_below_lorenz
 }
 
+#' Modified Gini coefficient
+#'
+#' @inheritParams gini_coefficient
+#'
 #' @export
 modified_gini_coefficient <- function(x) {
   g <- gini_coefficient(x)
@@ -25,11 +39,19 @@ modified_gini_coefficient <- function(x) {
   n / (n - 1) * g
 }
 
+#' Herfindahl index
+#'
+#' @param x A numeric vector.
+#'
 #' @export
 herfindahl_index <- function(x) {
   sum((x / sum(x))^2)
 }
 
+#' Modified Herfindahl index
+#'
+#' @inheritParams herfindahl_index
+#'
 #' @export
 modified_herfindahl_index <- function(x) {
   herfindahl_index(x) / length(x)

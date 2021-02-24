@@ -1,3 +1,7 @@
+#' Summarise sorted data
+#'
+#' @param x A numeric vector.
+#'
 #' @export
 sorted_data <- function(x) {
   dplyr::tibble(a_j = x) %>%
@@ -10,6 +14,11 @@ sorted_data <- function(x) {
     )
 }
 
+#' Transform contingency table of counts to vector
+#'
+#' @param x A numeric vector with unique values.
+#' @param count A numeric vector with same length as `x`.
+#'
 #' @export
 sorted_to_vector <- function(x, count) {
   stopifnot(length(x) == length(count))

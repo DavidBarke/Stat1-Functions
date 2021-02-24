@@ -1,3 +1,8 @@
+#' Quantile skewness
+#'
+#' @param x A numeric vector.
+#' @param p Probability (less than 0.5)
+#'
 #' @export
 quantile_skewness <- function(x, p = 0.25) {
   stopifnot(p <= 0.5)
