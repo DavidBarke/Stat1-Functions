@@ -3,7 +3,7 @@
 #' @param x A matrix.
 #'
 #' @export
-chi_square <- function(x) {
+chi_squared <- function(x) {
   n <- sum(x)
   h_i <- matrix(rowSums(x))
   h_j <- matrix(colSums(x))

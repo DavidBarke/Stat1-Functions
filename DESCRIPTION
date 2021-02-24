@@ -11,5 +11,6 @@ LazyData: true
 Imports: dplyr, magrittr, pracma
 RoxygenNote: 7.1.1
 Roxygen: list(markdown = TRUE)
-url: https://github.com/DavidBarke/Stat1-Functions,
-     https://davidbarke.github.io/Stat1-Functions
+url: https://davidbarke.github.io/Stat1-Functions
+     https://github.com/DavidBarke/Stat1-Functions,
+BugReports: https://github.com/DavidBarke/Stat1-Functions/issues
