@@ -1,14 +1,15 @@
-Package: Stat1Klausur
+Package: Stat1
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Stat1 at TU Berlin
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: David Barkemeyer
+Maintainer: David Barkemeyer <david.barkemeyer@gmx.de>
+Description: Useful functions for Stat1 at TU Berlin.
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
 Imports: dplyr, magrittr, pracma
 RoxygenNote: 7.1.1
 Roxygen: list(markdown = TRUE)
+url: https://github.com/DavidBarke/Stat1-Functions,
+     https://davidbarke.github.io/Stat1-Functions

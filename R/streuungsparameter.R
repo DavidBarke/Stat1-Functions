@@ -1,6 +1,11 @@
-#' Empricial Variance
+#' Empirical deviations
 #'
-#' @param x A numeric vector.
+#' @param x,y Numeric vectors.
+#'
+#' @name empirical_deviation
+NULL
+
+#' @rdname empirical_deviation
 #'
 #' @export
 var_n <- function(x) {
@@ -8,18 +13,14 @@ var_n <- function(x) {
   (n - 1) / n * var(x)
 }
 
-#' Empiricial Standard Deviance
-#'
-#' @param x A numeric vector.
+#' @rdname empirical_deviation
 #'
 #' @export
 sd_n <- function(x) {
   sqrt(var_n(x))
 }
 
-#' Empricial Covariance
-#'
-#' @param x,y A numeric vector.
+#' @rdname empirical_deviation
 #'
 #' @export
 cov_n <- function(x, y) {
