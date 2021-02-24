@@ -85,7 +85,7 @@ grouped_data <- function(breaks, x, x_type = c("x", "h_j", "f_j"), n) {
     )
   }
 
-  tbl %>%
+  tbl <- tbl %>%
     dplyr::mutate(
       f_j = h_j / sum(h_j),
       b_j = to - from,
@@ -93,4 +93,14 @@ grouped_data <- function(breaks, x, x_type = c("x", "h_j", "f_j"), n) {
       H_j = cumsum(h_j),
       F_j = cumsum(f_j)
     )
+
+  structure(
+    tbl,
+    class = c("grouped_data", class(tbl))
+  )
+}
+
+#' @export
+mean.grouped_data <- function(x) {
+  sum(x$m_j * x$f_j)
 }

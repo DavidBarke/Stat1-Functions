@@ -8,7 +8,8 @@ grouped_data(breaks, x, x_type = c("x", "h_j", "f_j"), n)
 }
 \arguments{
 \item{breaks}{A numeric vector with length \emph{n + 1} where \emph{n} is the number of
-groups. Group \emph{i} is the right-open interval [\code{breaks[i]}, \code{breaks[i + 1]}).}
+groups. Group \emph{i} is the right-open interval [\code{breaks[i]}, \code{breaks[i + 1]}).
+Group \emph{n} is right-closed.}
 
 \item{x}{A numeric vector. See section \code{x_type}.}
 
