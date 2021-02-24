@@ -30,7 +30,7 @@ gini_coefficient <- function(x) {
 
 #' Modified Gini coefficient
 #'
-#' @inheritParams gini_coefficient
+#' @rdname gini_coefficient
 #'
 #' @export
 modified_gini_coefficient <- function(x) {
@@ -50,7 +50,7 @@ herfindahl_index <- function(x) {
 
 #' Modified Herfindahl index
 #'
-#' @inheritParams herfindahl_index
+#' @rdname herfindahl_index
 #'
 #' @export
 modified_herfindahl_index <- function(x) {

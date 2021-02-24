@@ -2,13 +2,18 @@
 % Please edit documentation in R/konzentration.R
 \name{gini_coefficient}
 \alias{gini_coefficient}
+\alias{modified_gini_coefficient}
 \title{Gini coefficient}
 \usage{
 gini_coefficient(x)
+
+modified_gini_coefficient(x)
 }
 \arguments{
 \item{x}{A numeric vector.}
 }
 \description{
 Gini coefficient
+
+Modified Gini coefficient
 }
