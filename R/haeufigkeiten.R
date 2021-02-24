@@ -4,7 +4,7 @@
 #'
 #' @export
 sorted_data <- function(x) {
-  dplyr::tibble(a_j = x) %>%
+  tbl <- dplyr::tibble(a_j = x) %>%
     dplyr::group_by(a_j) %>%
     dplyr::summarise(h_j = dplyr::n()) %>%
     dplyr::mutate(
@@ -12,6 +12,16 @@ sorted_data <- function(x) {
       H_j = cumsum(h_j),
       F_j = cumsum(f_j)
     )
+
+  structure(
+    tbl,
+    class = c("sorted_data", class(tbl))
+  )
+}
+
+#' @export
+mean.sorted_data <- function(x, ...) {
+  sum(x$a_j * x$f_j)
 }
 
 #' Transform contingency table of counts to vector
@@ -101,6 +111,6 @@ grouped_data <- function(breaks, x, x_type = c("x", "h_j", "f_j"), n) {
 }
 
 #' @export
-mean.grouped_data <- function(x) {
+mean.grouped_data <- function(x, ...) {
   sum(x$m_j * x$f_j)
 }
